@@ -87,6 +87,8 @@
 		84CEC4CD1B22F651007AA2F8 /* WebserviceDemo */ = {
 			isa = PBXGroup;
 			children = (
+				84CEC4F71B230CF1007AA2F8 /* StreamImageViewController.h */,
+				84CEC4F81B230CF1007AA2F8 /* StreamImageViewController.m */,
 				84CEC4F41B22FEB9007AA2F8 /* DataListController.h */,
 				84CEC4F51B22FEB9007AA2F8 /* DataListController.m */,
 				84CEC4D21B22F651007AA2F8 /* AppDelegate.h */,
@@ -97,8 +99,6 @@
 				84CEC4DB1B22F651007AA2F8 /* Images.xcassets */,
 				84CEC4DD1B22F651007AA2F8 /* LaunchScreen.xib */,
 				84CEC4CE1B22F651007AA2F8 /* Supporting Files */,
-				84CEC4F71B230CF1007AA2F8 /* StreamImageViewController.h */,
-				84CEC4F81B230CF1007AA2F8 /* StreamImageViewController.m */,
 			);
 			path = WebserviceDemo;
 			sourceTree = "<group>";

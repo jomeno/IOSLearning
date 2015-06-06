@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface StreamImageViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

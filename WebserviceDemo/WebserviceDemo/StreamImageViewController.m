@@ -13,10 +13,16 @@
 @end
 
 @implementation StreamImageViewController
-
+@synthesize imageView;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSURL *url = [NSURL URLWithString:@"http://prashantranjan.com/images/flower1.png"];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    imageView.image = [[UIImage alloc]initWithData:data];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

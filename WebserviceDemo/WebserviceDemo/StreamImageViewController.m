@@ -18,9 +18,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSURL *url = [NSURL URLWithString:@"http://prashantranjan.com/images/flower1.png"];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    imageView.image = [[UIImage alloc]initWithData:data];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
+    //creating second thread
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //statement
+        NSURL *url = [NSURL URLWithString:@"http://prashantranjan.com/images/flower1.png"];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //what to update on foreground processing
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+            imageView.image = [[UIImage alloc]initWithData:data];
+        });
+        
+    });
+    
     
     
 }
